@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!---Author:Manasa  Date:04/11/2018/ -->
+    <!--- Text view to give message as enter city name -->
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Enter City Name"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:gravity="center"/>
+    <!--- edit text flexible to  enter or edit city name  -->
+    <EditText
+        android:id="@+id/inputCity"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:inputType="text" />
+    // button on click the weather information of requested city is displayed
+
+    <Button
+        android:id="@+id/get_weather_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:background="@color/colorAccent"
+        android:text="Get Weather"
+        android:textSize="20sp"
+        android:layout_gravity="center"/>
+// to provide spacing to have consistency without overlap
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="25dp" />
+    //similarly text view of city name
+    <TextView
+        android:id="@+id/txtCityname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="36dp"
+        android:gravity="center"/>
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+    <TextView
+        android:id="@+id/txtTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="45dp"
+        android:gravity="center"/>
+    // relative layout is used to display temp_min and temp_max side by side as parallel
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+        <TextView
+            android:id="@+id/txtTemp_min"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25dp"
+            android:layout_marginLeft="25dp"
+            android:gravity="left"/>
+
+        <TextView
+            android:id="@+id/txtTemp_max"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="25dp"
+            android:text=""
+            android:textSize="25dp"
+            android:gravity="right"/>
+
+        <android.support.v4.widget.Space
+            android:layout_width="wrap_content"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/txtMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="27dp"
+        android:gravity="center"/>
+
+    <Space
+        android:layout_width="wrap_content"
+        android:layout_height="50dp" />
+    // similar to temp_min and max here relative layout is used to display clouds
+    //and humidity on single row side by side on screen.
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtHumidity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="25dp"
+            android:layout_marginLeft="25dp"
+            android:gravity="left"/>
+
+        <TextView
+            android:id="@+id/txtAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="25dp"
+            android:gravity="right"
+            android:text=""
+            android:textSize="25dp" />
+    </RelativeLayout>
+</LinearLayout>
+
+
+
